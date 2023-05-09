@@ -45,42 +45,48 @@
   
   <div class="container ">
     <div class="signup-form d-flex justify-content-center">
-      <form action="#">
+      <form action="login.html" onsubmit = "return validate()">
         <h2>Sign Up</h2>
-        <p>Please fill in this form to create an account!</p>
+        <p>Please fill all the details to create an account!</p>
         <hr>
         <div class="form-group">
-          <label for="exampleInputEmail1">Enter Username</label>
+          <label for="exampleInputEmail1">Enter Username<span class="danger" style="color:red">*</span></label></label>
           <input type="text" class="form-control" id="username" placeholder="Username">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Enter email id </label>
-          <input type="text" class="form-control" id="email" placeholder="Email-Id">
+          <label for="exampleInputPassword1">Enter email id<span class="danger" style="color:red">*</span></label> </label>
+          <input type="text" class="form-control" id="email" placeholder="Email Id" onchange="email_check()">
+          <label for="email_error" id="email_error"></label>
 
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Enter Phone number</label>
-          <input type="tel" class="form-control" id="mobno" placeholder="Phone number">
+          <label for="exampleInputPassword1">Enter Phone number<span class="danger" style="color:red">*</span></label></label>
+          <input type="tel" class="form-control" id="mob_no" placeholder="Phone number" onchange="ph_check()">
+          <label for="mob_error" id="mob_error"></label>
 
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Enter password</label>
-          <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+          <label for="exampleInputPassword1">Enter password<span class="danger" style="color:red">*</span></label></label>
+          <input type="password" class="form-control" name="password" id="password" placeholder="Password"   onkeypress="Pwd_Strength_Check()">
+          <span id="Strength" class="badge displayBadge"></span>
 
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Re-enter password</label>
+          <label for="exampleInputPassword1">Re-enter password<span class="danger" style="color:red">*</span></label></label>
           <input type="password" class="form-control" id="confirm_password" placeholder=" Re-enter Password">
+          <span id='message'></span>
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Sign Up</button><br>
-        <button type="button" class="btn btn-link">I have an account..</button>
+        <a href="login.html" class="btn btn-link" id="signup_login">I have an account..</a>
       </form>
     </div>
   </div>
   <footer id="sticky_footer" class=" bg-dark text-white-50">
     <p class="text-center">Designed By Lymi</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

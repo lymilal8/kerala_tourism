@@ -43,25 +43,28 @@
       </div>
     </nav>
     <div class="container">
-      <div class="row ms-auto mt-5" id="login_part">
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <div class="mb-3">
-            <h2>USER LOGIN</h2>
+      <form action="index.html" onsubmit = "return login_validate()">
+        <div class="row ms-auto mt-5" id="login_part">
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="mb-3">
+              <h2>USER LOGIN</h2>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Password">
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary btn-sm">Login</button>
+              <a  href="signup.html" id="login_sign">SignUp</a>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
-          </div>
-          <div class="mb-3">
-            <button type="button" class="btn btn-primary btn-sm">Login</button>
-          </div>
-        </div>
 
-      </div>
+        </div>
+      </form>
 
     </div>
 
@@ -69,6 +72,8 @@
   <footer id="sticky_footer" class=" bg-dark text-white-50 ">
     <p class="text-center">Designed By Lymi</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

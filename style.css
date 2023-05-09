@@ -26,7 +26,15 @@ body{
     font-size: small;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
- 
+ #login_sign
+ {
+   font-size: small;
+ }
+ #signup_login{
+  font-size: small;
+  color:blue;
+  text-align: left;
+ }
   div.masthead {
     padding-top: 10.5rem;
     padding-bottom: 6rem;
